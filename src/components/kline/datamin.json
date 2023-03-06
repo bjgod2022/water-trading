@@ -1,0 +1,38 @@
+{
+  "chart": {
+    "type": "Spline",
+    "data": [],
+    "settings": {
+      "showVolume": true,
+      "priceLine": true,
+      "lineWidth": 1,
+      "color": "pink"
+    },
+    "grid": {
+      "logScale": false
+    }
+  },
+  "onchart": [
+    {
+      "name": "均线",
+      "type": "EMA",
+      "data": [],
+      "settings": {
+        "length": 21
+      }
+    }
+  ],
+  "offchart": [
+    {
+      "name": "RSI",
+      "type": "RSI",
+      "data": [],
+      "settings": {
+        "lineWidth": 1,
+        "upper": 70,
+        "lower": 30,
+        "backColor": "#EEE8EC31"
+      }
+    }
+  ]
+}

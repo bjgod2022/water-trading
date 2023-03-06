@@ -1,0 +1,309 @@
+@import './index.scss';
+
+
+.stock-window {
+    // width: 100%;
+    // height:auto;s
+    border-radius: 2px;
+    // overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    background-color: $--dark-background;
+    color: $--dark-foreground;
+
+    height: 100%;
+
+
+    >.window-content {
+
+        >.stock-top {
+            display: flex;
+            align-items: flex-start;
+            padding: 0px 0px 0 10px;
+            -webkit-app-region: drag; //不可拖动
+
+            >.stock-name {
+                font-size: 25px !important;
+            }
+
+            >.stock-code {
+                flex: 1;
+                margin-left: 15px;
+                margin-top: 15px;
+                font-size: 14px;
+                font-weight: 500;
+                color: $--dark-foreground;
+                overflow: hidden;
+
+                >a {
+                    &.gain-more {
+                        color: $--dark-more-color;
+                    }
+
+                    &.gain-less {
+                        color: $--dark-less-color;
+                    }
+
+                    &.gain-ping {
+                        color: $--dark-less-color;
+                    }
+                }
+
+            }
+
+
+
+            >.action-buttons {
+                position: relative;
+                z-index: 9999999;
+                display: flex;
+                align-items: center;
+                padding-right: 5px;
+                -webkit-app-region: no-drag; // 按钮不可拖拽
+
+
+                >a {
+                    display: block;
+                    height: 14px;
+                    line-height: 14px;
+                    width: 30px;
+                    text-align: center;
+                    cursor: pointer;
+                    color: #888;
+
+                    >i {
+                        font-size: 14px;
+                    }
+
+                    &:hover {
+                        color: #000;
+                    }
+
+                    &.button-min {
+                        margin-left: 8px;
+                        padding-left: 8px;
+                        border-left: 1px solid #e0e0e0;
+                    }
+
+                    &.button-close {
+                        &:hover {
+                            color: #F84B4B;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.price-row {
+            padding: 10px 15px;
+            display: flex;
+            width: 50%;
+            align-items: baseline;
+            justify-content: space-between;
+
+
+            >.left-part {
+                display: flex;
+                align-items: baseline;
+                color: #555;
+
+                >.current-price {
+                    font-size: 30px;
+                    font-family: sans-serif;
+                    font-weight: bold;
+                }
+
+                >.gain-price,
+                >.gain-percent {
+                    margin-left: 10px;
+                    font-size: 14px;
+                }
+
+                &.gain-more {
+                    color: $--dark-more-color;
+                }
+
+                &.gain-less {
+                    color: $--dark-less-color;
+                }
+            }
+
+            >.right-part {
+                font-size: 12px;
+                color: #aaa;
+            }
+
+        }
+
+        >.stock-info-form {
+            padding: 0 15px;
+            overflow: hidden;
+            width: 50%;
+
+            .el-form-item {
+                $form-item-height: 21px;
+                margin-right: 0;
+                margin-bottom: 0;
+                height: $form-item-height;
+                display: flex;
+                float: left;
+                width: 25%;
+
+                &.gain-more {
+                    color: $--dark-more-color;
+                }
+
+                &.gain-less {
+                    color: $--dark-less-color;
+                }
+
+                >label {
+                    width: 50px;
+                    font-size: 13px !important;
+                    padding-right: 5px;
+                    line-height: $form-item-height;
+                    color: #333;
+                }
+
+                >.el-form-item__content {
+                    line-height: $form-item-height !important;
+
+                    >span {
+                        display: inline-block;
+                        height: 20px;
+                        font-size: 13px !important;
+                        line-height: $form-item-height !important;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        >.k-line {
+            margin-top: 1px;
+            border-top: 1px solid #eee;
+            width: 100%;
+            display: flex;
+
+            >.line-picture {
+                background-color: red;
+                // display: flex;
+                // align-items: center;
+                // justify-content: center;
+            }
+
+
+            >.order-list {
+                border-left: 1px solid #eee;
+
+                >.inner-title {
+                    text-align: center;
+                    font-size: 12px;
+                    background-color: #fafafa;
+                    border-bottom: 1px solid #eaeaea;
+                }
+
+                $list-line-height: 18px;
+
+                >ul.sell-order,
+                >ul.buy-order {
+                    padding: 2px 8px;
+                    list-style: none;
+                    border-bottom: 1px solid #eaeaea;
+
+                    >li {
+                        font-size: 11px;
+                        line-height: $list-line-height;
+                        width: 120px;
+                        display: flex;
+
+                        >span {
+                            display: inline-block;
+                        }
+
+                        >.order-index {
+                            width: 30px;
+                        }
+
+                        >.order-price {
+                            width: 60px;
+                            text-align: center;
+                            color: #888;
+
+                            &.gain-more {
+                                color: $--dark-more-color;
+                            }
+
+                            &.gain-less {
+                                color: $--dark-less-color;
+                            }
+                        }
+
+                        >.order-count {
+                            width: 60px;
+                            text-align: right;
+                        }
+
+                    }
+                }
+
+                >ul.deal-detail {
+                    padding: 3px 8px;
+                    list-style: none;
+
+                    >li {
+                        font-size: 11px;
+                        line-height: $list-line-height;
+                        width: 120px;
+                        display: flex;
+
+                        >span {
+                            display: inline-block;
+                        }
+
+                        >.deal-time {
+                            width: 40px;
+                        }
+
+                        >.deal-price {
+                            width: 60px;
+                            text-align: center;
+
+                            &.gain-more {
+                                color: $--dark-more-color;
+                            }
+
+                            &.gain-less {
+                                color: $--dark-less-color;
+                            }
+                        }
+
+                        >.deal-count {
+                            width: 40px;
+                            text-align: right;
+
+                            &.deal-buy {
+                                color: $--dark-more-color;
+                            }
+
+                            &.deal-sell {
+                                color: $--dark-less-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 修改加载中遮罩样式
+.el-loading-mask {
+    margin: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    height: 535px;
+}
+
+.hpchart {
+    overflow-y: auto;
+}

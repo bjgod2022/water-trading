@@ -1,0 +1,61 @@
+/* 改变主题色变量 */
+$--color-primary: teal;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// @import "~element-ui/packages/theme-chalk/src/index";
+// // 在element-variables.scss文件中定义基础变量
+// $--color-primary: #409eff;
+// $--color-success: #67c23a;
+// $--color-warning: #e6a23c;
+// $--color-danger: #f56c6c;
+//背景
+$default-theme:(
+    background:#132234,
+    background-section:#162639,
+    background-color:#162639,
+    text:rgba(255,255,255,0.8)
+);
+$white-theme:(
+    background:#f5f5f5,
+    background-section:#fff,
+    text:#000
+);
+
+// 字体颜色
+$text-h:#a8b6c8; // 高亮
+$text-d:#506277; // 暗
+
+$text-up:#f03a4f;
+$text-down:#00ca66;
+$delay:300ms;
+
+// 圆角
+$radius:10px;
+$radis-small:5px;
+
+// 宽度限制
+$min-width:320PX;
+$max-width:750PX;
+
+// font-size
+$size:20px;
+$size-big:34px;
+$size-biggest:70px;
+$size-small:26px;
+$size-mini:20px;
+
+// 主题系统
+$themes:(
+    default:$default-theme,
+    white:$white-theme
+);
+// 字号
+$sizes:(
+    default:$size,
+    big:$size-big,
+    biggest:$size-biggest,
+    small:$size-small,
+    mini:$size-mini
+)

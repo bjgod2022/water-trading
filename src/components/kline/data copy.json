@@ -1,0 +1,151 @@
+{
+  "chart": {
+   
+    "data": [
+    ],
+    "settings": {
+      "showVolume":true,
+      "colorCandleUp":"#c020209C",
+      "colorCandleDw":"#00ff609C",
+     
+      "colorWickUp":"#c02020D6",
+      "colorWickDw":"#00ff60D6",
+      "colorWickSm":"#35a9c64E",
+      "colorVolUp":"#c0202054",
+      "colorVolDw":"#00ff6054",
+      "priceLine":true
+  },
+  "grid": {}
+
+  },
+  "onchart": [
+    {
+      "name": "Cloud",
+      "type": "Ichi",
+      "data": [],
+      "settings": {}
+  },
+    {
+      "name": "Parabolic SAR",
+      "type": "SAR",
+      "data": [],
+      "settings": {
+        "start":0.02,
+        "inc":0.02,
+        "max":0.02,
+        "lineWidth":2,
+          "color": "#fca9c6"
+      }
+  },
+    {
+      "name": "Moving Average Ribbon",
+      "type": "Ribbon",
+      "data": [],
+      "settings": {
+          "colors": ["#3aaaf4ee"],
+          "start": 10,
+          "number": 10,
+          "step": 5
+      }
+  },
+    {
+      "name": "布林带",
+      "type": "BB",
+      "data": [],
+      "settings": {
+        "color": "#2cc6c99C",
+        "backColor": "#7788996E"
+    }
+  },
+  {
+    "name": "EMA, 25",
+    "type": "EMA",
+    "data": [
+     
+    ],
+    "settings": { "length":1}
+  },
+  
+    {
+      "name": "周易选股",
+      "type": "GRIN",
+      "data": [],
+      "settings": {
+        "z-index":-16,
+        "legend": false
+      }
+    }
+ 
+  ],
+  "offchart": [
+    {
+      "name": "Commodity Channel Index",
+      "type": "CCI",
+      "data": [],
+      "settings": {
+          "color": "#e28a3dee",
+          "backColor": "#e28a3d11",
+          "bandColor": "#aaaaaa",
+          "upper": 100,
+          "lower": -100
+      }
+  },
+    {
+      "name": "Money Flow Index",
+      "type": "MFI",
+      "data": [],
+      "settings": {
+          "color": "#85c427ee",
+          "backColor": "#85c42711",
+          "bandColor": "#aaaaaa",
+          "upper": 80,
+          "lower": 20
+      }
+  },
+    {
+      "name": "RSI, 20",
+      "type": "RSI",
+      "data": [],
+      "settings": {
+        "lineWidth":2,
+        "upper": 70,
+        "lower": 30,
+        "backColor":"#85c42731"
+      }
+    },
+    
+  
+    {
+      "name": "MACD",
+      "type": "MACD",
+      "data": [],
+      "settings": {
+       
+        "histColors": [
+            "#e54150", "#ea969e" ,"#35a776", "#79e0b3"
+        ]
+      }
+  }
+  ],
+  
+  "tools": [
+    {
+        "type": "LineTool",
+        "settings": {
+            "color": "#35c460"
+        }
+    },
+    {
+        "type": "LineTool:Extended",
+        "settings": {
+            "color": "#3186c4"
+        }
+    },
+    {
+        "type": "LineTool:Ray",
+        "settings": {
+            "color": "#c43169"
+        }
+    }
+]
+}

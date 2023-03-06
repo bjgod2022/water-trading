@@ -1,0 +1,56 @@
+{
+  "chart": {
+    "type": "Candles",
+    "data": [],
+    "grid": {
+      "logScale": true
+    }
+  },
+  "onchart": [
+    {
+      "name": "EMA, 21",
+      "type": "EMA",
+      "data": [],
+      "settings": {
+        "length": 21
+      }
+    }
+  ],
+  "offchart": [
+    {
+      "name": "RSI, 20",
+      "type": "RSI",
+      "data": [],
+      "settings": {
+        "upper": 70,
+        "lower": 30
+      }
+    },
+    {
+      "name": "Stoch",
+      "type": "Stoch",
+      "data": [],
+      "settings": {}
+    }
+  ],
+  "tools": [
+    {
+      "type": "LineTool",
+      "settings": {
+        "color": "#35c460"
+      }
+    },
+    {
+      "type": "LineTool:Extended",
+      "settings": {
+        "color": "#3186c4"
+      }
+    },
+    {
+      "type": "LineTool:Ray",
+      "settings": {
+        "color": "#c43169"
+      }
+    }
+  ]
+}

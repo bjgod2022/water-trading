@@ -1,0 +1,21 @@
+{
+  "chart": {
+    "data": [],
+    "settings": {},
+    "grid": {
+      "logScale": false
+    }
+  },
+  "onchart": [
+    {
+      "name": "周易选股",
+      "type": "GRIN",
+      "data": [],
+      "settings": {
+        "z-index": -16,
+        "legend": "['display', 'settings', 'up', 'down', 'add']"
+      }
+    }
+  ],
+  "offchart": []
+}
